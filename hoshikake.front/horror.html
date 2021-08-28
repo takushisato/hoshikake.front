@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/horror_styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/kowaiikao.jpg" alt="うふふ" id="kowaiikao">
+    <img src="img/kowaiup.jpg" alt="うふふ" id="kowaiup">
+</body>
+<script>
+    const kowaiikao = document.getElementById('kowaiikao');
+    const kowaiup = document.getElementById('kowaiup');
+
+    setTimeout(function(){
+      window.history.back();
+    }, 1500);
+
+    setInterval(function () {
+        kowaiikao.classList.add('up');
+    }, 500);
+
+    setInterval(function () {
+        kowaiikao.classList.add('remove');
+    }, 1000);
+
+    setInterval(function () {
+        kowaiup.classList.add('#kowaiup');
+    }, 1300);
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+    height: 100vh;
+    width: auto;
+}
+
+.up {
+    height: 150vh;
+}
+
+#kowaiup {
+    display: block;
+    width: 100%;
+}
+
+.remove {
+    display: none;
+}
+
+.super-up {
+    display: none;
+}

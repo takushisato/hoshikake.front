@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "kowai";
+  src: url(kowai.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  background-image: url(../img/back.png);
+  background-repeat: repeat;
+  /* color: white; */
+  user-select: none;
+}
+
+.houkai {
+  display: none;
+}
+
+h1 {
+  font-family: "kowai";
+}
+p {
+  font-size: 17px;
+}
+
+.top-img {
+  width: 100%;
+  display: block;
+}
+
+.nav {
+  background-color: #1a1a1a;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  /* background-size: cover;
+  background-position: 50%; */
+}
+
+.nav > ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > ul > li {
+  padding: 5px;
+  margin: 0 30px;
+  margin-top: 10px;
+}
+
+.nav > ul > li > a {
+  font-family: "MSゴシック", "メイリオ";
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main_section {
+  width: 100%;
+  height: 100vh;
+}
+
+/* スライドショー */
+#slide_show {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border: 5px outset gray;
+  border-style: outset;	
+}
+
+.slide_show {
+  margin: 30px auto;
+  width: 90%;
+  object-fit: cover;
+}
+
+.slider-outer{
+  position: relative;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 1s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* コンテンツ */
+.explanation,.information, .price, .access, .food_shop, .contact {
+  background-color: white;
+  margin: 20px auto;
+  padding: 10px auto;
+  min-height: 80vh;
+  border: 5px outset gray;
+  border-style: outset;	
+  text-align: center;
+}
+
+.information_time_am {
+  padding: 5px;
+  background-color: red;
+  color: white;
+}
+
+.information_time_pm {
+  padding: 5px;
+  background-color: blue;
+  color: white;
+}
+
+/* カレンダー */
+.calendar-container {
+  /* max-width: 450px; */
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.month_flex{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.month {
+  display: block;
+  margin: 5px auto;
+  background: lightgray;
+  color: black;
+}
+
+.september {
+  max-width: 450px;
+  margin: 5px auto;
+}
+
+.month > h1 {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.calendar {
+  padding: 0 30px 30px 30px;
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+th {
+  font-weight: normal;
+  font-size: 14px;
+}
+td {
+  font-weight: bold;
+}
+.day *:first-child {
+  color: #ff838b;
+}
+.day *:last-child {
+  color: #6fb5ff;
+}
+
+.price > img {
+  margin: 0 auto;
+  display: block;
+  max-width: 400px;
+  width: 90%;
+}
+
+.food_table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.food_img {
+  width: 50%;
+}
+
+.contact {
+  padding: 20px;
+}
+
+.google_map {
+	position:relative;
+	width:100%;
+	height:0;
+	padding-top:75%;
+}
+.google_map iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+@media screen and (min-width: 1084px) {
+  #app {
+  display: none;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  .nav > ul {
+  display: none;
+  }
+
+  .slide_show {
+  width: 95%;
+  }
+
+  .month_flex {
+  display: block;
+  }
+
+  .month {
+    max-width: 450px;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar-container {
+    display: none;
+  }
+}
+
+/* レスポンシブ */
+Result Skip Results Iframe
+EDIT ON
+.Form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+@media screen and (max-width: 480px) {
+.Form {
+  margin-top: 40px;
+  }
+}
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .Form-Item {
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  }
+}
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label {
+  max-width: inherit;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  }
+}
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label.isMsg {
+  margin-top: 0;
+  }
+}
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: #fff;
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Label-Required {
+    border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 32px;
+  font-size: 10px;
+  }
+}
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Input {
+  margin-left: 0;
+  margin-top: 18px;
+  height: 40px;
+  flex: inherit;
+  font-size: 15px;
+  }
+}
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+@media screen and (max-width: 480px) {
+.Form-Item-Textarea {
+  margin-top: 18px;
+  margin-left: 0;
+  height: 200px;
+  flex: inherit;
+  font-size: 15px;
+  }
+}
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #5bc8ac;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+.Form-Btn {
+  margin-top: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 160px;
+  font-size: 16px;
+  }
+}
+
+/* フッター */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  margin-top: 15px;
+}
+
+footer > p {
+  font-family: "MS UI ゴシック", "MS ゴシック";
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  color: white;
+}
+
+footer > a {
+  font-family: "MSゴシック", "メイリオ";
+  font-size: 18px;
+  color: white;
+}
+
+/* 個人情報 */
+.personal_information, .information_h1 {
+  font-family: "MS UI ゴシック", "MS ゴシック";
+  background-color: white;
+  color: black;
+}
+
+/* 上に戻るボタン */
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+.Page-Btn{
+  position: fixed;
+  text-align: right;
+  color: #FFFFFF;
+  background-color: #0040FF;
+  font-size: 1.55em; 
+  z-index:1000;
+
+}
+.Page-Btn-Icon{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100;
+  padding: 0;
+  margin: 20px;
+  border-radius: 10px;
+  background: linear-gradient( rgba(255, 242, 160, 0)90%, rgba(255, 242, 160, 0)90%, rgba(10, 10, 10, 0.5));
+  font-size: 30px;
+  cursor:pointer;
+}
+
+.scroll_img {
+  animation-name: fuwafuwa;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+
+@keyframes fuwafuwa {
+  0% {
+      transform: translate(0,0px);
+  }
+
+  100% {
+      transform: translate(0,-20px)
+  }
+}
+
+.osunayo {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  background-color: orangered;
+  cursor:pointer;
+}

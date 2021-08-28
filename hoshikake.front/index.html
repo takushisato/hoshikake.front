@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>この夏一番の恐怖を</title>
+</head>
+<body>
+  <!-- 上に戻るボタン -->
+  <div class="introduction Page-Text" id="introduction">
+    <div class="Page-Btn" @click="scrollTop">
+      <i class="fas fa-chevron-up Page-Btn-Icon"><img src="img/obake_icon.png" alt="おばけあいこん" class="scroll_img"></i>
+    </div>
+  </div>
+  <div id="main" >
+      <img src="img/nav-back.jpg" alt="背景" class="top-img">
+        <div id="app">
+            <slide>
+                <a href="#nav">
+                  <span>ホーム</span>
+                </a>
+                <a href="#introduction">
+                  <span>施設紹介</span>
+                </a>
+                <a href="#information">
+                  <span>営業案内</span>
+                </a>
+                <a href="#price">
+                  <span>入館料</span>
+                </a>
+                <a href="#access">
+                  <span>アクセス</span>
+                </a>
+                <a href="#food_shop">
+                  <span>フード＆ショップ</span>
+                </a>
+                <a href="#contact">
+                  <span>お問合せ</span>
+                </a>
+            </slide>
+            <div id="page-wrap"></div>
+        </div>
+        <div class="nav" id="nav">
+            <ul>
+                <li><a href="#nav">ホーム</a></li>
+                <li><a href="#introduction">施設紹介</a></li>
+                <li><a href="#information">営業案内</a></li>
+                <li><a href="#price">入館料</a></li>
+                <li><a href="#access">アクセス</a></li>
+                <li><a href="#food_shop">フード＆ショップ</a></li>
+                <li><a href="#contact">お問合せ</a></li>
+            </ul>
+        </div>
+        <div class="Page main">
+          <!-- スライドショー -->
+              <div id="slide_show">
+                <div class="slider-outer">
+                  <transition name="fade">
+                    <div :key="idx" v-for="(image, idx) in images" v-if="current_img == idx">
+                      <img v-bind:src="images[idx].img" :key="images[idx].img" class="slide_show" />
+                    </div>
+                  </transition>
+                </div>
+              </div>
+          <br>
+          <div id="houkai">
+                  <!-- コンテンツ -->
+                  <div class="explanation" :class="{animated, animate__hinge1}">
+                      <h1>施設紹介</h1>
+                      <h2>とてつもない恐怖の館がこの夏、青森にオープン</h2>
+                      <p>お化け屋敷の常識を覆す仕掛けの数々・・・</p>
+                      <p>新たな恐怖の仕組みが入る者を恐怖体験へと誘う</p>
+                      <p>恐怖の会場となるのは今年廃校になったばかりの星駆中学校</p>
+                      <p>曰く付きの場所となった、この中学校がこの夏『お化け屋敷』としてオープン！</p>
+                      <p>過去数十年に渡り青森の地で子供達の学び舎になっていた中学校・・・</p>
+                      <p>しかし過去には卒業生７名が行方不明になる事件が発生。</p>    
+                      <p>現在も７名の行方は分かっていない。</p>
+                      <p>そんな曰く付きの中学校が星駆企画（株）の手によって、全国屈指のお化け屋敷としてリニューアルオープンします！</p>
+                      <p>もしもに備えて除霊は行っていますが、もしかすると本物が登場するかも知れません・・・</p>
+                      <p>この夏一番の恐怖体験を味わってみませんか？</p>
+                      <p>ぜひ足をお運びください！</p>
+                  </div>
+                  <div class="information" id="information" :class="{animated, animate__hinge2}">
+                    <h1>営業時間</h1>
+                    <p style="font-size: 25px;"><span class="information_time_am">AM</span>10:00　～　<span class="information_time_pm">PM</span>19:00</p>
+                    <h1>営業期間</h1>
+                    <p>7/1～9/30まで（木曜定休日）　<span style="background-color: aquamarine; color: aquamarine;">あ</span>営業日</p>
+                    <div class="calendar-container">
+                      <!-- ７月 -->
+                      <div class="month_flex">
+                        <div class="month">
+                          <h1>July 2021</h1>
+                          <table class="calendar">
+                            <tr>
+                              <th>SUN</th>
+                              <th>MON</th>
+                              <th>TUE</th>
+                              <th>WED</th>
+                              <th>THU</th>
+                              <th>FRI</th>
+                              <th>SAT</th>
+                            </tr>
+                            <tr class="day">
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>1</td>
+                              <td style="background-color: aquamarine;">2</td>
+                              <td style="background-color: aquamarine;">3</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">4</td>
+                              <td style="background-color: aquamarine;">5</td>
+                              <td style="background-color: aquamarine;">6</td>
+                              <td style="background-color: aquamarine;">7</td>
+                              <td>8</td>
+                              <td style="background-color: aquamarine;">9</td>
+                              <td style="background-color: aquamarine;">10</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">11</td>
+                              <td style="background-color: aquamarine;">12</td>
+                              <td style="background-color: aquamarine;">13</td>
+                              <td style="background-color: aquamarine;">14</td>
+                              <td>15</td>
+                              <td style="background-color: aquamarine;">16</td>
+                              <td style="background-color: aquamarine;">17</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">18</td>
+                              <td style="background-color: aquamarine;">19</td>
+                              <td style="background-color: aquamarine;">20</td>
+                              <td style="background-color: aquamarine;">21</td>
+                              <td>22</td>
+                              <td style="background-color: aquamarine;">23</td>
+                              <td style="background-color: aquamarine;">24</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">25</td>
+                              <td style="background-color: aquamarine;">26</td>
+                              <td style="background-color: aquamarine;">27</td>
+                              <td style="background-color: aquamarine;">28</td>
+                              <td>29</td>
+                              <td style="background-color: aquamarine;">30</td>
+                              <td style="background-color: aquamarine;">31</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!-- ８月 -->
+                        <div class="month">
+                          <h1>August 2021</h1>
+                          <table class="calendar">
+                            <tr>
+                              <th>SUN</th>
+                              <th>MON</th>
+                              <th>TUE</th>
+                              <th>WED</th>
+                              <th>THU</th>
+                              <th>FRI</th>
+                              <th>SAT</th>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">1</td>
+                              <td style="background-color: aquamarine;">2</td>
+                              <td style="background-color: aquamarine;">3</td>
+                              <td style="background-color: aquamarine;">4</td>
+                              <td>5</td>
+                              <td style="background-color: aquamarine;">6</td>
+                              <td style="background-color: aquamarine;">7</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">8</td>
+                              <td style="background-color: aquamarine;">9</td>
+                              <td style="background-color: aquamarine;">10</td>
+                              <td style="background-color: aquamarine;">11</td>
+                              <td>12</td>
+                              <td style="background-color: aquamarine;">13</td>
+                              <td style="background-color: aquamarine;">14</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">15</td>
+                              <td style="background-color: aquamarine;">16</td>
+                              <td style="background-color: aquamarine;">17</td>
+                              <td style="background-color: aquamarine;">18</td>
+                              <td>19</td>
+                              <td style="background-color: aquamarine;">20</td>
+                              <td style="background-color: aquamarine;">21</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">22</td>
+                              <td style="background-color: aquamarine;">23</td>
+                              <td style="background-color: aquamarine;">24</td>
+                              <td style="background-color: aquamarine;">25</td>
+                              <td>26</td>
+                              <td style="background-color: aquamarine;">27</td>
+                              <td style="background-color: aquamarine;">28</td>
+                            </tr>
+                            <tr class="day">
+                              <td style="background-color: aquamarine;">29</td>
+                              <td style="background-color: aquamarine;">30</td>
+                              <td style="background-color: aquamarine;">31</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- ９月 -->
+                      <div class="month september">
+                        <h1>September 2021</h1>
+                        <table class="calendar">
+                          <tr>
+                            <th>SUN</th>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                            <th>SAT</th>
+                          </tr>
+                          <tr class="day">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="background-color: aquamarine;">1</td>
+                            <td>2</td>
+                            <td style="background-color: aquamarine;">3</td>
+                            <td style="background-color: aquamarine;">4</td>
+                          </tr>
+                          <tr class="day">
+                            <td style="background-color: aquamarine;">5</td>
+                            <td style="background-color: aquamarine;">6</td>
+                            <td style="background-color: aquamarine;">7</td>
+                            <td style="background-color: aquamarine;">8</td>
+                            <td>9</td>
+                            <td style="background-color: aquamarine;">10</td>
+                            <td style="background-color: aquamarine;">11</td>
+                          </tr>
+                          <tr class="day">
+                            <td style="background-color: aquamarine;">15</td>
+                            <td style="background-color: aquamarine;">16</td>
+                            <td style="background-color: aquamarine;">17</td>
+                            <td style="background-color: aquamarine;">18</td>
+                            <td>19</td>
+                            <td style="background-color: aquamarine;">20</td>
+                            <td style="background-color: aquamarine;">21</td>
+                          </tr>
+                          <tr class="day">
+                            <td style="background-color: aquamarine;">22</td>
+                            <td style="background-color: aquamarine;">23</td>
+                            <td style="background-color: aquamarine;">24</td>
+                            <td style="background-color: aquamarine;">25</td>
+                            <td>26</td>
+                            <td style="background-color: aquamarine;">27</td>
+                            <td style="background-color: aquamarine;">28</td>
+                          </tr>
+                          <tr class="day">
+                            <td style="background-color: aquamarine;">29</td>
+                            <td style="background-color: aquamarine;">30</td>
+                            <td style="background-color: aquamarine;">31</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <button @click="Click" class="osunayo">押すなよ！絶対に押すなよ！</button>
+                  <div class="price" id="price" :class="{animated, animate__hinge1}">
+                      <h1>入館料</h1>
+                      <p  style="font-size: 25px;"><span class="information_time_am">大人</span>2000円　<span class="information_time_pm">中学生以下</span>1500円</p>
+                      <br>
+                      <p>※個人の障害者の方と同伴者１名様は半額となります。（但し、同伴者は大人の方に限ります。）</p>
+                      <p>※障害者団体につきましては、問い合わせフォームか電話にてお問合せください。</p>
+                      <p>クレジットカード・電子マネーもご利用いただけます。</p>
+                      <img src="img/kureka.jpg" alt="クレジットカード">
+                  </div>
+                  <div class="access" id="access" :class="{animated, animate__hinge2}">
+                      <h1>アクセス</h1>
+                      <p>青森県上北郡野辺地町星駆631-3</p>
+                      <p>市立星駆中学校跡地</p>
+                      <br>
+                      <p>星駆駅までバス送迎あります。詳しくはお問合せください。</p>
+                      <p>（団体１０名様以上で無料）</p>
+                      <div class="google_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d96557.44804312872!2d141.0454039!3d40.8626507!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1628836087725!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                      </div>
+                  </div>
+                <div class="food_shop" id="food_shop"  :class="{animated, animate__hinge1}">
+                    <h1>フード＆ショップ</h1>
+                    <p>館内にフードコーナーとお土産コーナー完備！</p>
+                    <p>星駆自慢のメニューをぜひご堪能ください！</p>
+                    <p>種類も豊富でお子様からご年配の方まで、家族みんな大満足！</p>
+                    <table class="food_table">
+                        <tr>
+                          <td><img src="img/raamen.png" alt="ラーメン" class="food_img"></td><td><img src="img/karee.png" alt="カレー" class="food_img" ></td>
+                        </tr>
+                        <tr>
+                          <td>出汁にこだわったラーメン！</td><td>シェフ特製のビーフカレー！</td>
+                        </tr>
+                        <tr>
+                          <td><img src="img/hanbaagu.png" alt="ハンバーグ" class="food_img"></td><td><img src="img/omuraisu.png" alt="オムライス" class="food_img"></td>
+                        </tr>
+                        <tr>
+                          <td>和牛で作ったハンバーグ！</td><td>とろとろオムレツとケチャップのハーモニー！</td>
+                        </tr>
+                        <tr>
+                          <td><img src="img/beer.png" alt="ビール" class="food_img"></td><td><img src="img/okosamaranti.png" alt="お子様ランチ" class="food_img"></td>
+                        </tr>
+                        <tr>
+                          <td>アルコールも用意しています！</td><td>お子様ランチにはおもちゃが付属します！</td>
+                        </tr>
+                      </table>
+                </div>
+                <div class="contact" id="contact" :class="{animated, animate__hinge2}">
+                    <h1>お問合せ</h1>
+                    <div class="Form">
+                      <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                        <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+                      </div>
+                      <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+                        <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+                      </div>
+                      <div class="Form-Item">
+                        <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                        <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+                      </div>
+                      <div class="Form-Item">
+                        <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                        <textarea class="Form-Item-Textarea"></textarea>
+                      </div>
+                      <input type="submit" class="Form-Btn" value="送信する">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <br>
+            <a href="personal_information.html">個人情報に対する考え方</a>
+            <br><br>
+            <p>星駆株式会社</p>
+            <p>青森県上北郡野辺地町星駆631-3</p>
+            <p>旧:市立星駆中学校跡地</p>
+            <p>TEL:0170-33-△△△△</p>
+            <p>© Copyright 2018 hogehoge Default Co.,Ltd.</p>
+        </footer>
+  </div>
+<audio  id="bakuhatu" preload><source src="audio/bakuhatu.mp3" type="audio/mp3"></audio>
+<audio  id="warai" preload><source src="audio/warai.mp3" type="audio/mp3"></audio>
+<audio  id="glass" preload><source src="audio/glass.mp3" type="audio/mp3"></audio>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue-burger-menu@2.0.3/dist/vue-burger-menu.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="js/main.js" charset="utf-8"></script>
+</html>
